@@ -10,3 +10,21 @@ chmod 2775 /var/www
 find /var/www -type d -exec chmod 2775 {} \;
 find /var/www -type f -exec chmod 0664 {} \;
 echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+
+
+//mysql -u admin -p'password' -h database1.ceaqyubwm5tx.ap-south-1.rds.amazonaws.com
+
+create database employees_db;
+show databases;
+use employees_db;
+
+CREATE TABLE employees (
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100) NOT NULL,
+address VARCHAR(255) NOT NULL,
+salary INT(10) NOT NULL
+);
+rm /var/www/html/phpinfo.php
+rm: remove write-protected regular file ‘/var/www/html/phpinfo.php’? /
+[ec2-user@ip-10-0-14-191 ~]$ git clone https://github.com/gnataraj-mf/phpmysql.git /var/www/html/
+
